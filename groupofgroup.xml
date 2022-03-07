@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<groups>
+			<define name="homeneeds">
+				<include name="Electronics"></include>
+				<exclude name="Kitchenware"></exclude>
+				<include name="Stationery"></include>
+
+			</define>
+
+			<run>
+
+				<include name="homeneeds"></include>
+			</run>
+
+		</groups>
+
+		<classes>
+			<class name="com.testng.org.Group_Test" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
